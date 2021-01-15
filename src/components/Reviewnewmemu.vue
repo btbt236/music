@@ -79,8 +79,8 @@ ul {
     -webkit-box-orient: vertical;
       font-size: 13px;
       padding: 0;
-      margin: 0;
-      padding: 1px 2px 3px 6px;
+      margin: 2px;
+   
       font-weight: 400;
       overflow: hidden;
 

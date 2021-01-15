@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/home.vue'
-import search from '../views/search.vue'
+import search from '../views/Search.vue'
 import Review from '../views/Review.vue'
-import Playlist from '../views/Playlist.vue'
+// import Playlist from '../views/Playlist.vue'
 
 
 
@@ -14,12 +14,13 @@ const routes = [
     path:"/",
     name:"Review",
     component:Review,
-    
+    meta: { isShowNav: true },
   },
   {
     path: '/home',
     name: 'home',
-    component: Home
+    component: Home,
+    meta: { isShowNav: true },
   },
   {
     path: '/search',
@@ -27,13 +28,16 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: search
+    component: search,
+    meta: { isShowNav: true },
   },
   {
-    path:'/Playlist',
+    // path:'/Playlist',
+    // name:'Playlist',
+    // component: Playlist
+    path:'/playlist',
     name:'Playlist',
-    component: Playlist
-
+    component: () => import("../views/Playlist.vue")
   }
 ]
 
